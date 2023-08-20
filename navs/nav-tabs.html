@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add this line -->
+
+    <title>Bav Tabs</title>
+<style>
+    .nav-link:hover {
+            background-color: #664f1e49;
+            border-radius: 1em;
+    }
+
+    .nav-link:active {
+        background-color: rgb(133, 6, 116);
+    }
+        
+    .active-tab {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Adjust the hover color for active tabs */
+        .active-tab:hover {
+            background-color: #0056b3;
+        }
+
+        .user-dropdown {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .user-dropdown a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-brand {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .dropdown-menu {
+            border-radius: 1em;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+           right: -20px;
+           
+           left: -20px;
+          
+           
+}
+
+.footer-ul {
+    gap: 20px;
+}
+@media (max-width: 991.98px) {
+            .user-dropdown {
+                position: relative !important;
+                margin-top: 10px;
+                margin-right: 0;
+            }
+        }
+</style>
+</head>
+
+<body>
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-code"></i> Nav Tabs Example</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">    
+                <ul class="navbar-nav ms-auto" role="tablist">
+        
+        
+        <li class="nav-item " role="presentation">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><i class="fas fa-bell"></i> Notifications</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab4-tab" data-bs-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false"><i class="fas fa-dice-four"></i> Tab 4</a>
+        </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab5-tab" data-bs-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false"><i class="fas fa-dice-five"></i> Tab 5</a>
+        </li> 
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab5-tab" data-bs-toggle="tab" href="#tab6" role="tab" aria-controls="tab6" aria-selected="false"><i class="fas fa-dice-six"></i> Tab 6</a>
+        </li>
+        <!--User Drop Down-->  
+        <li class="nav-item dropdown user-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>User dropdown 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+            </div>
+        </li>
+      </ul>
+
+    </div>
+</div>
+</nav>     
+      
+   
+      <!--Main Content-->
+      <div class="tab-content" id="myTabContent">
+        
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <!--Tab 1 Home content-->
+            <span class="fa fa-home"></span>
+        </div>
+        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+            <!--tab 2 Contact Content-->
+            <span class="fa fa-bicycle"></span>
+        </div>
+        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+            <!--Tab 3 Content--><span class="fa fa-horse"></span>
+        </div>
+        <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+            <!--Tab 4 Content--><span class="fa fa-dice-four"></span>
+        </div>
+        <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+            <!--Tab 5 Content --><span class="fa fa-dice-five"></span></div>
+        <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+            <!--Tab 6 Content---><span class="fa fa-dice-six"></span>
+        </div>
+      </div>
+
+<footer class="container p-4  rounded ">
+    <div class="container-lg d-lg-flex justify-content-between">
+        <div class="logo">
+            <span>Logo</span>
+        </div>
+        <div class="copyright">
+            <p>Crafted By iamtechysandy</p>
+        </div>
+        <div>
+            <ul class="d-flex gap-4 list-unstyled footer-ul">
+                <li><a href="#"><span class="bi bi-facebook"></a></span></li>
+                <li><a href="#"><span class="bi bi-github"></a></a></span></li>
+                <li><a href="#"><span class="bi bi-twitter"></a></span></li>
+                <li><a href="#"><span class="bi bi-instagram"></a></span></li>
+                <li><a href="#"><span class="bi bi-youtube"></span></a></li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Address:</strong> On Earth</p>
+            <p><strong>Email <span class="bi bi-envelope"></span>:</strong>mail@mail.com</p>
+        </div>
+    </div>
+</footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Store active tab in local storage and activate it on page load
+    $(document).ready(function () {
+            $(".nav-link").on("click", function () {
+                localStorage.setItem("activeTab", $(this).attr("id"));
+            });
+
+            let activeTabId = localStorage.getItem("activeTab");
+            if (activeTabId) {
+                $("#" + activeTabId).tab("show");
+            }
+        });
+</script>   
+</body>
+</html>
